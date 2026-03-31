@@ -6,13 +6,13 @@ const chatbotHTML = `
     </div>
     <div class="chatbot-window">
         <div class="chatbot-header">
-            <h3>Addis Power AI Assistant</h3>
+            <h3>🤖 BEST Web & AI Assistant</h3>
             <i class="fas fa-times" id="closeChatbot"></i>
         </div>
         <div class="chatbot-messages">
             <div class="message bot">
                 <div class="message-content">
-                    Hello! I'm Addis Power AI Assistant. How can I help you today?
+                    👋 Hello! I'm BEST, your Web & AI Assistant from Addis Power. How can I help you today?
                 </div>
             </div>
         </div>
@@ -53,11 +53,32 @@ function sendMessage() {
     addMessage(message, 'user');
     chatbotInput.value = '';
     
+    // Show typing indicator
+    addTypingIndicator();
+    
     // Simulate AI response
     setTimeout(() => {
+        removeTypingIndicator();
         const response = getAIResponse(message);
         addMessage(response, 'bot');
-    }, 500);
+    }, 800);
+}
+
+// Add typing indicator
+function addTypingIndicator() {
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'message bot typing-indicator';
+    typingDiv.innerHTML = '<div class="message-content">BEST is typing<span>...</span></div>';
+    typingDiv.id = 'typingIndicator';
+    chatbotMessages.appendChild(typingDiv);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+function removeTypingIndicator() {
+    const typing = document.getElementById('typingIndicator');
+    if (typing) {
+        typing.remove();
+    }
 }
 
 // Add message to chat
@@ -69,33 +90,49 @@ function addMessage(text, sender) {
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
 
-// AI Response Logic
+// AI Response Logic for BEST Assistant
 function getAIResponse(message) {
     const msg = message.toLowerCase();
     
-    if (msg.includes('price') || msg.includes('cost') || msg.includes('birr')) {
-        return "Our website packages start from 15,000 ETB for basic websites. Business Pro is 35,000 ETB, and Enterprise AI is 75,000 ETB. We also offer add-on services starting from 2,500 ETB/month. Would you like more details?";
+    // Pricing responses with updated amounts
+    if (msg.includes('price') || msg.includes('cost') || msg.includes('birr') || msg.includes('plan')) {
+        return "💰 Here are our plans in Ethiopian Birr (ETB):\n\n📌 Basic Plan: 8,000 ETB\n📌 Business Plan: 25,000 ETB (Most Popular!)\n📌 Enterprise Plan: 50,000 ETB\n\nAdd-ons start from 2,500 ETB/month. Which plan interests you?";
+    }
+    else if (msg.includes('basic')) {
+        return "📌 Basic Plan - 8,000 ETB\n✅ 5 Pages Website\n✅ Responsive Design\n✅ Contact Form\n✅ Basic SEO\n✅ 1 Month Support\nPerfect for small businesses starting online!";
+    }
+    else if (msg.includes('business')) {
+        return "📌 Business Plan - 25,000 ETB (Most Popular!)\n✅ 15 Pages Website\n✅ BEST AI Chatbot Integration\n✅ E-commerce Ready\n✅ Advanced SEO\n✅ 6 Months Support\n✅ Analytics Dashboard\nGreat for growing businesses!";
+    }
+    else if (msg.includes('enterprise')) {
+        return "📌 Enterprise Plan - 50,000 ETB\n✅ Unlimited Pages\n✅ Custom Web Application\n✅ Advanced AI Integration\n✅ Full E-commerce Suite\n✅ Premium SEO\n✅ 12 Months Support\n✅ 24/7 Priority Support\nThe ultimate solution for large organizations!";
     }
     else if (msg.includes('service') || msg.includes('offer')) {
-        return "We offer Web Development, AI Integration, Mobile App Development, and Digital Marketing services. Which service are you interested in?";
+        return "🛠️ We offer:\n• Web Development\n• AI Integration (with BEST AI Chatbot)\n• Mobile App Development\n• Digital Marketing\n• SEO Optimization\nWhich service interests you?";
     }
     else if (msg.includes('web') || msg.includes('website')) {
-        return "We create modern, responsive websites tailored to your business needs. Our plans start from 15,000 ETB. Would you like to see our portfolio?";
+        return "🌐 We create modern, responsive websites starting from 8,000 ETB. Our Business Plan includes the BEST AI Chatbot integration. Would you like to see our portfolio?";
     }
-    else if (msg.includes('ai') || msg.includes('artificial intelligence')) {
-        return "We specialize in AI solutions including chatbots, predictive analytics, and machine learning models. Our AI integration starts from 8,000 ETB for a custom chatbot.";
+    else if (msg.includes('ai') || msg.includes('artificial intelligence') || msg.includes('chatbot')) {
+        return "🤖 I'm BEST, your AI Assistant! We specialize in AI solutions including:\n• Custom AI Chatbots\n• Predictive Analytics\n• Machine Learning Models\n• Natural Language Processing\nOur BEST AI Chatbot can be added to any website for just 5,000 ETB!";
     }
-    else if (msg.includes('contact') || msg.includes('reach')) {
-        return "You can contact us via Telegram at @addis_power, email at agoodperception@gmail.com, or use the contact form on our website. We typically respond within 24 hours!";
+    else if (msg.includes('best')) {
+        return "🌟 I'm BEST, your Web & AI Assistant! I'm here to help you with information about our services, pricing, and anything else you need. How can I assist you today?";
     }
-    else if (msg.includes('hello') || msg.includes('hi')) {
-        return "Hello! Welcome to Addis Power AI & Web Solution. How can I assist you today?";
+    else if (msg.includes('contact') || msg.includes('reach') || msg.includes('telegram')) {
+        return "📞 You can reach us through:\n• Telegram: @addis_power\n• Email: agoodperception@gmail.com\n• Contact form on our website\nWe typically respond within 24 hours!";
+    }
+    else if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
+        return "👋 Hello! I'm BEST, your Web & AI Assistant. Welcome to Addis Power! How can I help you today?";
     }
     else if (msg.includes('support') || msg.includes('help')) {
-        return "I'm here to help! You can ask me about our services, pricing, or contact information. What would you like to know?";
+        return "🆘 I'm here to help! You can ask me about:\n• Our pricing plans (8k, 25k, 50k ETB)\n• Our services (Web, AI, Mobile)\n• Contact information\n• BEST AI Chatbot\nWhat would you like to know?";
+    }
+    else if (msg.includes('thank')) {
+        return "😊 You're welcome! If you have any other questions, feel free to ask. We're here to help you succeed!";
     }
     else {
-        return "Thank you for your message! For detailed inquiries, please contact us directly on Telegram at @addis_power or email agoodperception@gmail.com. Is there anything specific you'd like to know about our services?";
+        return "🤖 I'm BEST, your AI Assistant. For more details, please contact us on Telegram at @addis_power or email agoodperception@gmail.com. Is there anything specific about our plans (8,000 ETB - 50,000 ETB) or services you'd like to know?";
     }
 }
 
@@ -107,12 +144,9 @@ chatbotInput.addEventListener('keypress', (e) => {
     }
 });
 
-// Auto-open chatbot after 3 seconds (optional)
+// Auto welcome message after page load
 setTimeout(() => {
     if (!chatbotWindow.classList.contains('active')) {
-        chatbotWindow.classList.add('active');
-        setTimeout(() => {
-            chatbotWindow.classList.remove('active');
-        }, 5000);
+        addMessage("👋 Welcome to Addis Power! I'm BEST, your Web & AI Assistant. Our plans start from 8,000 ETB. How can I help you today?", 'bot');
     }
-}, 3000);
+}, 1000);
