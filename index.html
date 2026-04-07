@@ -3,386 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addis Power | AI & Web Solutions Ethiopia</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #eef2f8 100%);
-            color: #1a2c3e;
-            line-height: 1.5;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, #0b3b5f, #1e5a7d);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .header p {
-            color: #4a627a;
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(115deg, #0b3b5f, #1a4d6b);
-            color: white;
-            border-radius: 2rem;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #f4b942;
-            margin: 1rem 0;
-        }
-
-        .hero .btn {
-            display: inline-block;
-            background: #f4b942;
-            color: #0b3b5f;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: transform 0.2s;
-        }
-
-        .hero .btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Features Grid */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            color: #0b3b5f;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .stat {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 1rem;
-        }
-
-        .stat .number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #f4b942;
-        }
-
-        /* AI Assistant */
-        .assistant {
-            background: linear-gradient(115deg, #ffffff 0%, #fef9e8 100%);
-            border-radius: 2rem;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-left: 8px solid #f4b942;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .assistant h3 {
-            font-size: 1.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .assistant .badge {
-            background: #1f7a5a10;
-            padding: 0.25rem 1rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            color: #1f7a5a;
-        }
-
-        /* ========= NEW FOOTER (POLISHED) ========= */
-        .footer {
-            background: #0a1c2a;
-            color: #cbd5e6;
-            padding: 3rem 2rem 1.5rem;
-            border-radius: 2rem 2rem 0 0;
-            margin-top: 3rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-            position: relative;
-        }
-
-        .footer-col h4:after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: #f4b942;
-        }
-
-        .footer-col p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col li {
-            margin-bottom: 0.6rem;
-        }
-
-        .footer-col a {
-            color: #b9d0e7;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-col a:hover {
-            color: #f4b942;
-        }
-
-        .contact-line {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            background: #1f3a4b;
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid #2a4258;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 0.85rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        @media (max-width: 700px) {
-            .container {
-                padding: 1rem;
-            }
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    <title>Addis Power AI & Web Solution | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🚀 Addis Power Solution</h1>
-            <p>AI-Powered Web Solutions for Ethiopian Businesses</p>
-        </div>
-
-        <!-- Hero -->
-        <div class="hero">
-            <h2>Empowering Businesses with AI & Web Solutions</h2>
-            <div class="price">Starting from 8,000 ETB</div>
-            <p>Transform your business with cutting-edge AI technology and professional web development services tailored for Ethiopian businesses.</p>
-            <a href="#" class="btn">📞 Contact Us Now</a>
-        </div>
-
-        <!-- Why Choose Us - Features -->
-        <h2 style="text-align: center; margin-bottom: 1.5rem;">Why Choose Us?</h2>
-        <div class="features">
-            <div class="feature-card">
-                <div class="icon">🤖</div>
-                <h3>AI-Powered Solutions</h3>
-                <p>Advanced AI integration with BEST Assistant for automation and smart decision making.</p>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Addis Power <span>AI & Web</span></h1>
             </div>
-            <div class="feature-card">
-                <div class="icon">💻</div>
-                <h3>Modern Web Development</h3>
-                <p>Responsive, fast, and SEO-optimized websites starting from 8,000 ETB.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🕒</div>
-                <h3>24/7 Support</h3>
-                <p>Dedicated support team always ready to help you succeed.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">📈</div>
-                <h3>Business Growth</h3>
-                <p>Strategies designed to boost your online presence and sales.</p>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
+    </nav>
 
-        <!-- Stats -->
-        <div class="stats">
-            <div class="stat"><div class="number">50+</div><div>Projects Completed</div></div>
-            <div class="stat"><div class="number">30+</div><div>Happy Clients</div></div>
-            <div class="stat"><div class="number">24/7</div><div>Support Available</div></div>
-            <div class="stat"><div class="number">100%</div><div>Satisfaction Rate</div></div>
-        </div>
-
-        <!-- AI Assistant -->
-        <div class="assistant">
-            <div>
-                <h3>🤖 POWER Web & AI Assistant <span class="badge">online 24/7</span></h3>
-                <p>👋 Hello! I'm POWER, your Web & AI Assistant from Addis Power. How can I help you today?</p>
-                <p style="margin-top: 0.5rem;">📞 You can reach us on Telegram @addis_power or call <strong>+251 911 573 334</strong></p>
-            </div>
-            <div>
-                <a href="https://t.me/+0911573334" style="background: #1f7a5a; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; text-decoration: none;">💬 Chat on Telegram</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========= NEW POLISHED FOOTER ========= -->
-    <div class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Addis Power Solution</h4>
-                <p>Empowering Ethiopian businesses with AI-driven web solutions, modern websites, and smart automation. Your trusted tech partner.</p>
-                <div class="social-links">
-                    <a href="https://t.me/+0911573334" target="_blank">📱 Telegram</a>
-                    <a href="#">📘 Facebook</a>
-                    <a href="#">🔗 LinkedIn</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Businesses with <span class="highlight">AI & Web Solutions</span></h1>
+                <p>Transform your business with cutting-edge AI technology and professional web development services tailored for Ethiopian businesses. <strong>Plans start from just 8,000 ETB!</strong></p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">View Plans</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">🏠 Home</a></li>
-                    <li><a href="#">🚀 AI Services</a></li>
-                    <li><a href="#">💻 Web Development</a></li>
-                    <li><a href="#">💰 Pricing (from 8,000 ETB)</a></li>
-                    <li><a href="#">📞 Contact Support</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <div class="contact-line">📞 <strong>Hotline:</strong> +0911573334</div>
-                <div class="contact-line">✈️ <strong>Telegram:</strong> +0911573334 / @addis_power</div>
-                <div class="contact-line">📧 <strong>Email:</strong> info@addispower.com</div>
-                <div class="contact-line">📍 <strong>Location:</strong> Addis Ababa, Ethiopia</div>
-                <div class="contact-line">⏰ <strong>Support:</strong> 24/7 (AI + Human)</div>
-            </div>
-
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                    <li>📄 Licensed in Ethiopia</li>
-                </ul>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI-Powered Solutions</h3>
+                    <p>Advanced AI integration with BEST Assistant for automation and smart decision making.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Modern Web Development</h3>
+                    <p>Responsive, fast, and SEO-optimized websites starting from 8,000 ETB.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support team always ready to help you succeed.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business Growth</h3>
+                    <p>Strategies designed to boost your online presence and sales.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer-bottom">
-            <span>© 2025 Addis Power Web & AI Solution — All rights reserved.</span>
-            <span>🚀 Telegram & Hotline: <strong>+0911573334</strong> | 24/7 Available</span>
-            <span><a href="#" style="color: #f4b942;">⬆ Back to top</a></span>
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- ========= ONLY FOOTER IS POLISHED BELOW ========= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Addis Power AI & Web</h3>
+                    <p>Your trusted partner for AI and web solutions in Ethiopia.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/+0911573334" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fab fa-telegram"></i> <strong>Telegram:</strong> <a href="https://t.me/+0911573334" target="_blank" style="color: #f4b942; text-decoration: none;">+0911573334</a> / @addis_power</p>
+                    <p><i class="fas fa-phone"></i> <strong>Hotline:</strong> +0911573334</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> agoodperception@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Addis Ababa, Ethiopia</p>
+                    <p><i class="fas fa-clock"></i> <strong>Support:</strong> 24/7 Available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Addis Power AI & Web Solution. All rights reserved. | 📞 Telegram & Hotline: <strong>+0911573334</strong></p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========= END OF FOOTER CHANGES ========= -->
+
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
