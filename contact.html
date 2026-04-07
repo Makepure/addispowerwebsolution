@@ -2,285 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Addis Power – Contact Us</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(145deg, #f5f7fc 0%, #eef2f8 100%);
-            color: #1a2c3e;
-            line-height: 1.5;
-            padding: 2rem 1.5rem;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* header / brand */
-        .brand {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .brand h1 {
-            font-size: 2.2rem;
-            background: linear-gradient(135deg, #0b3b5f, #1e5a7d);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.3px;
-        }
-
-        .brand p {
-            color: #4a627a;
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-        }
-
-        /* contact card grid */
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 2rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
-            padding: 1.8rem 2rem;
-            flex: 1;
-            min-width: 260px;
-            transition: transform 0.2s ease, box-shadow 0.2s;
-            text-align: center;
-            backdrop-filter: blur(0px);
-            border: 1px solid rgba(255,255,255,0.5);
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 28px 40px -16px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: #0f3b5c;
-        }
-
-        .card .detail {
-            font-size: 1.35rem;
-            font-weight: 600;
-            background: #f0f4f9;
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            border-radius: 60px;
-            margin: 0.8rem 0;
-            font-family: monospace;
-            letter-spacing: 0.5px;
-            word-break: break-all;
-        }
-
-        .card .note {
-            font-size: 0.85rem;
-            color: #5e6f8d;
-            margin-top: 0.5rem;
-        }
-
-        .btn-contact {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #0b3b5f;
-            color: white;
-            text-decoration: none;
-            padding: 0.7rem 1.6rem;
-            border-radius: 60px;
-            font-weight: 500;
-            margin-top: 1.2rem;
-            transition: background 0.2s;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-contact:hover {
-            background: #1f6390;
-        }
-
-        .btn-telegram {
-            background: #1f7a5a;
-        }
-
-        .btn-telegram:hover {
-            background: #0f5e44;
-        }
-
-        .btn-call {
-            background: #2c6e2f;
-        }
-
-        .btn-call:hover {
-            background: #1e5521;
-        }
-
-        /* support assistant block */
-        .assistant-card {
-            background: linear-gradient(115deg, #ffffff 0%, #fef9e8 100%);
-            border-radius: 2rem;
-            padding: 1.8rem 2rem;
-            margin-top: 1rem;
-            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
-            border-left: 8px solid #f4b942;
-        }
-
-        .assistant-flex {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-
-        .assistant-text h3 {
-            font-size: 1.7rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .assistant-text p {
-            margin: 0.5rem 0 0;
-            color: #2c3e50;
-        }
-
-        .badge {
-            background: #1f7a5a10;
-            padding: 0.25rem 1rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #1f7a5a;
-            display: inline-block;
-        }
-
-        hr {
-            margin: 2rem 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, #cbd5e1, transparent);
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #5c6f87;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 700px) {
-            body {
-                padding: 1.2rem;
-            }
-            .card .detail {
-                font-size: 1.1rem;
-                word-break: break-word;
-            }
-            .btn-contact {
-                padding: 0.5rem 1.2rem;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Addis Power AI & Web Solution</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<div class="container">
-    <div class="brand">
-        <h1>📞 Addis Power Solution</h1>
-        <p>AI + Web | Ethiopia — reach out, we reply fast</p>
-    </div>
-
-    <div class="contact-grid">
-        <!-- Telegram card -->
-        <div class="card">
-            <div class="card-icon">📱✈️</div>
-            <h3>Telegram</h3>
-            <div class="detail">+0911573334</div>
-            <div class="note">username: @addis_power (official support)</div>
-            <a href="https://t.me/+0911573334" class="btn-contact btn-telegram" target="_blank" rel="noopener noreferrer">
-                💬 Message on Telegram
-            </a>
-            <p style="margin-top: 0.8rem; font-size: 0.8rem;">Fast replies | 24/7 assistant</p>
-        </div>
-
-        <!-- Hotline / Call card -->
-        <div class="card">
-            <div class="card-icon">📞🔥</div>
-            <h3>Hotline / Call</h3>
-            <div class="detail">+0911573334</div>
-            <div class="note">Voice calls & support — 8 AM – 9 PM</div>
-            <a href="tel:+0911573334" class="btn-contact btn-call">
-                📞 Call now
-            </a>
-            <p style="margin-top: 0.8rem; font-size: 0.8rem;">emergency / business inquiries</p>
-        </div>
-
-        <!-- extra web & AI info -->
-        <div class="card">
-            <div class="card-icon">🌍🤖</div>
-            <h3>Web & AI</h3>
-            <div class="detail">Plans from 8,000 ETB</div>
-            <div class="note">Responsive websites + BEST AI Assistant</div>
-            <a href="https://makepure.github.io/addispowerwebsolution/" class="btn-contact" target="_blank">
-                🌐 Visit main site
-            </a>
-        </div>
-    </div>
-
-    <!-- assistant block - like POWER bot -->
-    <div class="assistant-card">
-        <div class="assistant-flex">
-            <div class="assistant-text">
-                <h3>
-                    <span>🤖 POWER Assistant</span>
-                    <span class="badge">online 24/7</span>
-                </h3>
-                <p>👋 "Hello! I'm POWER, your Web & AI Assistant. You can reach us on <strong>Telegram +0911573334</strong> or call the <strong>hotline +0911573334</strong>. We build modern websites, AI chatbots & digital growth tools."</p>
-                <p style="margin-top: 12px;">📍 Based in Ethiopia | support in English & Amharic</p>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Addis Power <span>AI & Web</span></h1>
             </div>
-            <div>
-                <a href="https://t.me/+0911573334" style="background:#1f7a5a; color:white; padding:0.6rem 1.2rem; border-radius:50px; text-decoration:none; display:inline-flex; gap:8px; align-items:center;">
-                    💬 Telegram quick chat
-                </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <hr />
-    <div style="background: #eef2fa; border-radius: 1.8rem; padding: 1.2rem 1.8rem; text-align: center;">
-        <p style="font-weight: 500;">📢 Direct contact: <strong style="font-size: 1.2rem;">+0911573334</strong> — both Telegram & Hotline (same number)</p>
-        <p style="font-size: 0.9rem; margin-top: 0.3rem;">✔️ Web development ✔️ AI integration ✔️ 24/7 support ✔️ Ethiopia</p>
-    </div>
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any inquiries about our plans starting from 8,000 ETB</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Talk</h2>
+                    <p>Have a project in mind? We'd love to hear from you. Send us a message and we'll respond within 24 hours.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4>Telegram</h4>
+                                <a href="https://t.me/addis_power" target="_blank" class="contact-link">@addis_power</a>
+                                <p class="click-hint">Click to chat on Telegram</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:agoodperception@gmail.com" class="contact-link">agoodperception@gmail.com</a>
+                                <p class="click-hint">Click to send email</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone / WhatsApp</h4>
+                                <a href="tel:+251911573334" class="contact-link">+251 911 573 334</a>
+                                <a href="https://wa.me/251911573334" target="_blank" class="whatsapp-link">📱 WhatsApp Chat</a>
+                                <p class="click-hint">Click to call or WhatsApp</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Contact Buttons -->
+                    <div class="quick-contact">
+                        <h4>Quick Connect</h4>
+                        <div class="quick-buttons">
+                            <a href="https://t.me/addis_power" target="_blank" class="quick-btn telegram-btn">
+                                <i class="fab fa-telegram"></i> Telegram
+                            </a>
+                            <a href="https://wa.me/251911573334" target="_blank" class="quick-btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+251911573334" class="quick-btn call-btn">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number">
+                        <select required>
+                            <option value="">Select Plan/Service</option>
+                            <option>Basic Plan (8,000 ETB)</option>
+                            <option>Business Plan (25,000 ETB)</option>
+                            <option>Enterprise Plan (50,000 ETB)</option>
+                            <option>BEST AI Chatbot (5,000 ETB)</option>
+                            <option>Web Development</option>
+                            <option>AI Integration</option>
+                            <option>Mobile App</option>
+                            <option>Digital Marketing</option>
+                        </select>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        © 2025 Addis Power Web & AI Solution — All rights reserved.<br />
-        Reliable tech partner for Ethiopian businesses.
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Addis Power AI & Web</h3>
+                    <p>Your trusted partner for AI and web solutions in Ethiopia.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/addis_power" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/251911573334" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fab fa-telegram"></i> <a href="https://t.me/addis_power" target="_blank">@addis_power</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:agoodperception@gmail.com">agoodperception@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+251911573334">+251 911 573 334</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Addis Power AI & Web Solution. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-</div>
+
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
