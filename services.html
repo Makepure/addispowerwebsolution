@@ -46,16 +46,13 @@
                                 <stop offset="100%" style="stop-color:#764ba2"/>
                             </linearGradient>
                         </defs>
-                        <!-- Floating Cube for Web Dev -->
                         <g transform="translate(50, 45)">
                             <animateTransform attributeName="transform" type="rotate" from="0 50 45" to="360 50 45" dur="10s" repeatCount="indefinite" additive="sum"/>
                             <polygon points="0,-30 26,-15 0,0 -26,-15" fill="url(#codeGrad)" opacity="0.9"/>
                             <polygon points="-26,-15 0,0 0,30 -26,15" fill="#764ba2" opacity="0.85"/>
                             <polygon points="0,0 26,-15 26,15 0,30" fill="#4facfe" opacity="0.8"/>
-                            <!-- Code symbol </> on face -->
                             <text x="-8" y="5" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">&lt;/&gt;</text>
                         </g>
-                        <!-- Orbiting code brackets -->
                         <text x="15" y="20" font-family="monospace" font-size="10" fill="#667eea" opacity="0.6">&lt;/&gt;</text>
                         <text x="70" y="75" font-family="monospace" font-size="10" fill="#764ba2" opacity="0.6">{ }</text>
                     </svg>
@@ -83,13 +80,11 @@
                                 <stop offset="100%" style="stop-color:#667eea"/>
                             </linearGradient>
                         </defs>
-                        <!-- Floating Cube for AI -->
                         <g transform="translate(50, 45)">
                             <animateTransform attributeName="transform" type="rotate" from="0 50 45" to="360 50 45" dur="12s" repeatCount="indefinite" additive="sum"/>
                             <polygon points="0,-30 26,-15 0,0 -26,-15" fill="url(#aiGrad)" opacity="0.9"/>
                             <polygon points="-26,-15 0,0 0,30 -26,15" fill="#764ba2" opacity="0.85"/>
                             <polygon points="0,0 26,-15 26,15 0,30" fill="#00f2fe" opacity="0.8"/>
-                            <!-- AI Brain Symbol on face -->
                             <circle cx="-6" cy="-3" r="3" fill="#fff" opacity="0.9"/>
                             <circle cx="6" cy="-3" r="3" fill="#fff" opacity="0.9"/>
                             <circle cx="0" cy="-8" r="4" fill="#fff" opacity="0.9"/>
@@ -98,7 +93,6 @@
                             <line x1="-6" y1="-3" x2="-3" y2="4" stroke="#fff" stroke-width="1" opacity="0.7"/>
                             <line x1="6" y1="-3" x2="3" y2="4" stroke="#fff" stroke-width="1" opacity="0.7"/>
                         </g>
-                        <!-- AI Particles -->
                         <circle cx="20" cy="25" r="2" fill="#f093fb" opacity="0.6">
                             <animate attributeName="cy" values="25;15;25" dur="3s" repeatCount="indefinite"/>
                         </circle>
@@ -130,17 +124,14 @@
                                 <stop offset="100%" style="stop-color:#00f2fe"/>
                             </linearGradient>
                         </defs>
-                        <!-- Floating Phone Cube -->
                         <g transform="translate(50, 45)">
                             <animateTransform attributeName="transform" type="rotate" from="0 50 45" to="360 50 45" dur="8s" repeatCount="indefinite" additive="sum"/>
                             <polygon points="0,-30 26,-15 0,0 -26,-15" fill="url(#mobileGrad)" opacity="0.9"/>
                             <polygon points="-26,-15 0,0 0,30 -26,15" fill="#4facfe" opacity="0.85"/>
                             <polygon points="0,0 26,-15 26,15 0,30" fill="#667eea" opacity="0.8"/>
-                            <!-- Mobile screen icon -->
                             <rect x="-8" y="-12" width="16" height="20" rx="2" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
                             <circle cx="0" cy="10" r="1.5" fill="#fff" opacity="0.9"/>
                         </g>
-                        <!-- App icons floating -->
                         <rect x="18" y="18" width="8" height="8" rx="2" fill="#4facfe" opacity="0.5"/>
                         <rect x="70" y="65" width="8" height="8" rx="2" fill="#00f2fe" opacity="0.5"/>
                     </svg>
@@ -168,18 +159,15 @@
                                 <stop offset="100%" style="stop-color:#f5576c"/>
                             </linearGradient>
                         </defs>
-                        <!-- Floating Chart Cube -->
                         <g transform="translate(50, 45)">
                             <animateTransform attributeName="transform" type="rotate" from="0 50 45" to="360 50 45" dur="14s" repeatCount="indefinite" additive="sum"/>
                             <polygon points="0,-30 26,-15 0,0 -26,-15" fill="url(#marketingGrad)" opacity="0.9"/>
                             <polygon points="-26,-15 0,0 0,30 -26,15" fill="#f5576c" opacity="0.85"/>
                             <polygon points="0,0 26,-15 26,15 0,30" fill="#f093fb" opacity="0.8"/>
-                            <!-- Chart/growth symbol -->
                             <polyline points="-8,5 -8,-2 -2,-2" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
                             <polyline points="-2,5 -2,-5 4,-5" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
                             <polyline points="4,5 4,-8 10,-8" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
                         </g>
-                        <!-- Growth arrows -->
                         <path d="M65 20 L75 20 L75 10" stroke="#f093fb" stroke-width="1.5" fill="none" opacity="0.5"/>
                         <path d="M20 75 L30 75 L30 85" stroke="#f5576c" stroke-width="1.5" fill="none" opacity="0.5"/>
                     </svg>
@@ -199,6 +187,441 @@
         </div>
     </section>
 
+    <!-- ========= ANIMATED 3D CUBE SECTION (INSERTED BEFORE FOOTER) ========= -->
+    <style>
+        /* Animated Cube Styles - Integrated with existing design */
+        .cube-showcase {
+            background: radial-gradient(ellipse at center, #0a0a2a 0%, #020210 100%);
+            padding: 60px 20px;
+            margin: 40px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cube-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #44aaff, transparent);
+        }
+
+        .cube-showcase::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #44aaff, transparent);
+        }
+
+        /* Particle animation for cube section */
+        .cube-particle {
+            position: absolute;
+            background: radial-gradient(circle, #44aaff, transparent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            animation: floatUpCube linear infinite;
+        }
+
+        @keyframes floatUpCube {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% {
+                transform: translateY(-20vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        .cube-container-inline {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 40px;
+            perspective: 1200px;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cube-container-inline::before {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 20px;
+            background: radial-gradient(ellipse, rgba(68, 170, 255, 0.3), transparent);
+            filter: blur(10px);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cube-inline {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spinCube 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s ease;
+        }
+
+        .cube-container-inline:hover .cube-inline {
+            animation-play-state: paused;
+            transform: scale(1.05);
+        }
+
+        @keyframes spinCube {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        .face-inline {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 40px rgba(68, 170, 255, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backface-visibility: visible;
+        }
+
+        .front-inline  { transform: translateZ(150px); background: linear-gradient(135deg, rgba(10, 15, 26, 0.95), rgba(5, 8, 21, 0.95)); border: 2px solid #3399ff; }
+        .back-inline   { transform: rotateY(180deg) translateZ(150px); background: linear-gradient(135deg, rgba(10, 10, 26, 0.95), rgba(5, 5, 16, 0.95)); border: 2px solid #44aaff; }
+        .right-inline  { transform: rotateY(90deg) translateZ(150px); background: #0a1a0a; border: 2px solid #00ff66; }
+        .left-inline   { transform: rotateY(-90deg) translateZ(150px); background: linear-gradient(135deg, rgba(15, 10, 26, 0.95), rgba(10, 5, 21, 0.95)); border: 2px solid #8844ff; }
+        .top-inline    { transform: rotateX(90deg) translateZ(150px); background: linear-gradient(135deg, rgba(26, 10, 42, 0.95), rgba(10, 5, 21, 0.95)); border: 2px solid #ffaa33; }
+        .bottom-inline { transform: rotateX(-90deg) translateZ(150px); background: linear-gradient(135deg, rgba(10, 26, 42, 0.95), rgba(5, 16, 21, 0.95)); border: 2px solid #ff6644; }
+
+        .code-screen-inline {
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-screen-inline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(0deg, rgba(0, 255, 0, 0.03) 0px, rgba(0, 255, 0, 0.03) 2px, transparent 2px, transparent 8px);
+            pointer-events: none;
+        }
+
+        .terminal-text-inline {
+            font-family: 'Courier New', monospace;
+            color: #0f0;
+            text-shadow: 0 0 5px #0f0;
+            text-align: left;
+            padding: 20px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
+            margin: 15px;
+        }
+
+        .terminal-line-inline {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typingInline 2s steps(30, end);
+            margin: 8px 0;
+            font-size: 12px;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes typingInline {
+            from { width: 0; opacity: 0; }
+            to { width: 100%; opacity: 1; }
+        }
+
+        .cursor-inline {
+            display: inline-block;
+            width: 8px;
+            height: 14px;
+            background: #0f0;
+            vertical-align: middle;
+            animation: blinkInline 1s infinite;
+        }
+
+        @keyframes blinkInline {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .neural-network-inline {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .node-inline {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #88bbff, #3399ff);
+            border-radius: 50%;
+            animation: pulseInline 1.5s infinite;
+            box-shadow: 0 0 15px #3399ff;
+        }
+
+        @keyframes pulseInline {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.4); opacity: 1; }
+        }
+
+        .ai-text-inline {
+            font-size: 56px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #88bbff, #ffaa44);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(136, 187, 255, 0.3);
+        }
+
+        .brain-icon-inline {
+            font-size: 52px;
+            filter: drop-shadow(0 0 15px #ffaa44);
+            animation: brainGlowInline 2s infinite;
+        }
+
+        @keyframes brainGlowInline {
+            0%, 100% { filter: drop-shadow(0 0 10px #ffaa44); }
+            50% { filter: drop-shadow(0 0 25px #ffaa44); }
+        }
+
+        .brand-name-inline {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD966, #88bbff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 3px;
+        }
+
+        .cube-logo-text {
+            text-align: center;
+            margin-top: 20px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .cube-logo-text h2 {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD966, #88bbff, #44aaff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .cube-tagline {
+            color: #88bbff;
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: 500;
+        }
+
+        .cube-tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .cube-tech-item {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 11px;
+            color: #44aaff;
+            font-family: monospace;
+            border: 1px solid rgba(68, 170, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cube-tech-item:hover {
+            background: rgba(68, 170, 255, 0.15);
+            border-color: #44aaff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .cube-container-inline { width: 240px; height: 240px; }
+            .face-inline { width: 240px; height: 240px; }
+            .front-inline, .back-inline, .right-inline, .left-inline, .top-inline, .bottom-inline { transform: translateZ(120px); }
+            .back-inline { transform: rotateY(180deg) translateZ(120px); }
+            .right-inline { transform: rotateY(90deg) translateZ(120px); }
+            .left-inline { transform: rotateY(-90deg) translateZ(120px); }
+            .top-inline { transform: rotateX(90deg) translateZ(120px); }
+            .bottom-inline { transform: rotateX(-90deg) translateZ(120px); }
+            .cube-logo-text h2 { font-size: 36px; }
+            .terminal-line-inline { font-size: 9px; white-space: normal; }
+        }
+
+        @media (max-width: 480px) {
+            .cube-container-inline { width: 200px; height: 200px; }
+            .face-inline { width: 200px; height: 200px; }
+            .front-inline, .back-inline, .right-inline, .left-inline, .top-inline, .bottom-inline { transform: translateZ(100px); }
+            .back-inline { transform: rotateY(180deg) translateZ(100px); }
+            .right-inline { transform: rotateY(90deg) translateZ(100px); }
+            .left-inline { transform: rotateY(-90deg) translateZ(100px); }
+            .top-inline { transform: rotateX(90deg) translateZ(100px); }
+            .bottom-inline { transform: rotateX(-90deg) translateZ(100px); }
+            .cube-logo-text h2 { font-size: 28px; }
+            .brand-name-inline { font-size: 28px; }
+            .ai-text-inline { font-size: 44px; }
+        }
+    </style>
+
+    <div class="cube-showcase">
+        <div class="cube-container-inline">
+            <div class="cube-inline">
+                <div class="face-inline front-inline">
+                    <div style="font-size: 55px;">⚡</div>
+                    <div style="color: #44aaff; margin-top: 20px; font-size: 14px; font-weight: 600;">CIRCUIT CORE</div>
+                    <div style="color: #3399ff; font-size: 11px; margin-top: 8px;">ACTIVE</div>
+                </div>
+                <div class="face-inline back-inline">
+                    <div style="font-size: 55px;">🖥️</div>
+                    <div style="color: #88bbff; margin-top: 15px; font-size: 14px; font-weight: 600;">DEVELOPMENT</div>
+                    <div style="color: #ffaa44; font-size: 11px;">CORE v3.0</div>
+                </div>
+                <div class="face-inline right-inline code-screen-inline">
+                    <div class="terminal-text-inline">
+                        <div class="terminal-line-inline" style="animation-delay: 0s;">>_ system.boot()</div>
+                        <div class="terminal-line-inline" style="animation-delay: 0.5s;">>_ AI models loaded</div>
+                        <div class="terminal-line-inline" style="animation-delay: 1s;">>_ neural.network✓</div>
+                        <div class="terminal-line-inline" style="animation-delay: 1.5s;">>_ const power = 'Addis'</div>
+                        <div class="terminal-line-inline" style="animation-delay: 2s;">>_ deploy.ready()</div>
+                        <div class="terminal-line-inline" style="animation-delay: 2.5s;">>_ <span class="cursor-inline"></span></div>
+                    </div>
+                </div>
+                <div class="face-inline left-inline">
+                    <div style="font-size: 45px;">📊</div>
+                    <div style="color: #8844ff; font-size: 13px; margin-top: 12px; font-weight: 600;">DATA FLOW</div>
+                    <div style="color: #aa88ff; font-size: 10px;">100% OPTIMAL</div>
+                </div>
+                <div class="face-inline top-inline">
+                    <div class="neural-network-inline">
+                        <div class="node-inline" style="animation-delay: 0s;"></div>
+                        <div class="node-inline" style="animation-delay: 0.3s;"></div>
+                        <div class="node-inline" style="animation-delay: 0.6s;"></div>
+                        <div class="node-inline" style="animation-delay: 0.9s;"></div>
+                    </div>
+                    <div class="brain-icon-inline">🧠</div>
+                    <div class="ai-text-inline">AI</div>
+                    <div style="color: #88bbff; font-size: 11px;">NEURAL ENGINE</div>
+                </div>
+                <div class="face-inline bottom-inline">
+                    <div class="brand-name-inline">ADDIS</div>
+                    <div class="brand-name-inline" style="font-size: 28px;">POWER</div>
+                    <div style="color: #88bbff; font-size: 12px; margin-top: 8px;">WEB • AI • DEV</div>
+                    <div style="color: #ffaa44; font-size: 11px; margin-top: 5px;">&lt;/&gt;</div>
+                </div>
+            </div>
+        </div>
+        <div class="cube-logo-text">
+            <h2>ADDIS POWER</h2>
+            <div class="cube-tagline">AI DEVELOPMENT STUDIO</div>
+            <div class="cube-tech-stack">
+                <span class="cube-tech-item">WEB3</span>
+                <span class="cube-tech-item">AI/ML</span>
+                <span class="cube-tech-item">DEVOPS</span>
+                <span class="cube-tech-item">CLOUD NATIVE</span>
+                <span class="cube-tech-item">8K READY</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles for cube section
+        (function() {
+            const cubeSection = document.querySelector('.cube-showcase');
+            if (!cubeSection) return;
+            
+            function createCubeParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'cube-particle';
+                const size = Math.random() * 4 + 1.5;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = Math.random() * 5 + 4 + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.background = `radial-gradient(circle, ${Math.random() > 0.7 ? '#ffaa44' : '#44aaff'}, transparent)`;
+                cubeSection.appendChild(particle);
+                
+                setTimeout(() => {
+                    if (particle && particle.remove) particle.remove();
+                }, 9000);
+            }
+            
+            // Initial particles
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => createCubeParticle(), i * 80);
+            }
+            
+            // Continuous particles
+            let cubeParticleInterval = setInterval(() => {
+                if (cubeSection && document.body.contains(cubeSection)) {
+                    createCubeParticle();
+                } else {
+                    clearInterval(cubeParticleInterval);
+                }
+            }, 150);
+            
+            // Interactive cube pause/resume
+            const cubeInline = document.querySelector('.cube-inline');
+            const cubeContainerInline = document.querySelector('.cube-container-inline');
+            let hoverTimeout;
+            
+            if (cubeContainerInline) {
+                cubeContainerInline.addEventListener('mouseenter', () => {
+                    if (cubeInline) cubeInline.style.animationPlayState = 'paused';
+                });
+                
+                cubeContainerInline.addEventListener('mouseleave', () => {
+                    if (cubeInline) cubeInline.style.animationPlayState = 'running';
+                });
+                
+                cubeContainerInline.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    if (cubeInline) cubeInline.style.animationPlayState = 'paused';
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = setTimeout(() => {
+                        if (cubeInline) cubeInline.style.animationPlayState = 'running';
+                    }, 2000);
+                });
+            }
+        })();
+    </script>
+    <!-- ========= END OF ANIMATED 3D CUBE SECTION ========= -->
+
+    <!-- ========= POLISHED FOOTER ========= -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -206,7 +629,7 @@
                     <h3>Addis Power AI & Web</h3>
                     <p>Your trusted partner for AI and web solutions in Ethiopia.</p>
                     <div class="social-links">
-                        <a href="https://t.me/addis_power" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://t.me/+0911573334" target="_blank"><i class="fab fa-telegram"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -224,16 +647,19 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p><i class="fab fa-telegram"></i> <a href="https://t.me/addis_power" target="_blank">@addis_power</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:agoodperception@gmail.com">agoodperception@gmail.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+251911573334">+251 911 573 334</a></p>
+                    <p><i class="fab fa-telegram"></i> <strong>Telegram:</strong> <a href="https://t.me/+0911573334" target="_blank" style="color: #f4b942; text-decoration: none;">+0911573334</a> / @addis_power</p>
+                    <p><i class="fas fa-phone"></i> <strong>Hotline:</strong> +0911573334</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> agoodperception@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Addis Ababa, Ethiopia</p>
+                    <p><i class="fas fa-clock"></i> <strong>Support:</strong> 24/7 Available</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Addis Power AI & Web Solution. All rights reserved.</p>
+                <p>&copy; 2025 Addis Power AI & Web Solution. All rights reserved. | 📞 Telegram & Hotline: <strong>+0911573334</strong></p>
             </div>
         </div>
     </footer>
+    <!-- ========= END OF POLISHED FOOTER ========= -->
 
     <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
