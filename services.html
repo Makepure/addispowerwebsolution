@@ -184,6 +184,75 @@
                     <p><strong>Starting from 5,000 ETB/month</strong></p>
                 </div>
             </div>
+
+            <!-- ========= NEW SERVICE: DIGITAL MENU DEVELOPMENT ========= -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="menuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f4b942"/>
+                                <stop offset="50%" style="stop-color:#ff6b6b"/>
+                                <stop offset="100%" style="stop-color:#ee5a24"/>
+                            </linearGradient>
+                            <linearGradient id="qrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2ed573"/>
+                                <stop offset="100%" style="stop-color:#1e90ff"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Animated Rotating Menu Icon -->
+                        <g transform="translate(50, 45)">
+                            <animateTransform attributeName="transform" type="rotate" from="0 50 45" to="360 50 45" dur="9s" repeatCount="indefinite" additive="sum"/>
+                            <polygon points="0,-30 26,-15 0,0 -26,-15" fill="url(#menuGrad)" opacity="0.9"/>
+                            <polygon points="-26,-15 0,0 0,30 -26,15" fill="#f4b942" opacity="0.85"/>
+                            <polygon points="0,0 26,-15 26,15 0,30" fill="#ff6b6b" opacity="0.8"/>
+                            <!-- QR Code Representation -->
+                            <rect x="-8" y="-10" width="16" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
+                            <rect x="-5" y="-7" width="3" height="3" fill="#fff" opacity="0.9"/>
+                            <rect x="2" y="-7" width="3" height="3" fill="#fff" opacity="0.9"/>
+                            <rect x="-5" y="-1" width="3" height="3" fill="#fff" opacity="0.9"/>
+                            <rect x="2" y="-1" width="3" height="3" fill="#fff" opacity="0.9"/>
+                            <!-- Menu Fork -->
+                            <line x1="-3" y1="14" x2="-3" y2="20" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
+                            <line x1="3" y1="14" x2="3" y2="20" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
+                        </g>
+                        <!-- Floating QR Particles -->
+                        <rect x="15" y="20" width="6" height="6" rx="1" fill="#2ed573" opacity="0.6">
+                            <animate attributeName="y" values="20;10;20" dur="2.5s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+                        </rect>
+                        <rect x="72" y="68" width="6" height="6" rx="1" fill="#1e90ff" opacity="0.6">
+                            <animate attributeName="y" values="68;58;68" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+                        </rect>
+                        <!-- Menu Lines Animation -->
+                        <line x1="20" y1="30" x2="35" y2="30" stroke="#f4b942" stroke-width="2" opacity="0.7">
+                            <animate attributeName="x2" values="35;30;35" dur="1.5s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="20" y1="35" x2="40" y2="35" stroke="#ff6b6b" stroke-width="2" opacity="0.7">
+                            <animate attributeName="x2" values="40;35;40" dur="2s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="20" y1="40" x2="32" y2="40" stroke="#ee5a24" stroke-width="2" opacity="0.7">
+                            <animate attributeName="x2" values="32;28;32" dur="1.8s" repeatCount="indefinite"/>
+                        </line>
+                    </svg>
+                </div>
+                <div class="service-info">
+                    <h3>Digital Menu Development</h3>
+                    <p>Transform your restaurant or cafe with interactive QR code digital menus. Contactless ordering, real-time updates, and multilingual support.</p>
+                    <ul>
+                        <li>QR Code Menu System</li>
+                        <li>Multi-language Support (Amharic/English)</li>
+                        <li>Real-time Price & Item Updates</li>
+                        <li>Mobile-Optimized Interface</li>
+                        <li>Allergen & Dietary Icons</li>
+                        <li>Order Analytics Dashboard</li>
+                    </ul>
+                    <p><strong>Starting from 3,500 ETB</strong></p>
+                </div>
+            </div>
+            <!-- ========= END OF NEW SERVICE ========= -->
+
         </div>
     </section>
 
@@ -467,6 +536,16 @@
             background: rgba(68, 170, 255, 0.15);
             border-color: #44aaff;
             transform: translateY(-2px);
+        }
+
+        /* New Service Card Enhancement */
+        .service-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         @media (max-width: 768px) {
